@@ -46,7 +46,8 @@ export async function initializeDatasets() {
     renderDatasets(
       datasets,
       selectedDataset,
-      selectDataset
+      selectDataset,
+      removeDataset      
     );
 
   } catch (error) {
