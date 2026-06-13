@@ -163,6 +163,46 @@ You may not use this file except in compliance with the License.
         </div>
 
       </main>
+      <div class="visuals-panel" id="visuals-panel">
+
+  <div class="visuals-toolbar">
+
+    <div class="panel-title">
+      <span class="dot"></span>
+      Visuals Engine
+    </div>
+
+    <div class="visuals-actions">
+
+      <button
+        class="tool-btn"
+        onclick="toggleVisuals()"
+      >
+        Hide
+      </button>
+
+      <button
+        class="tool-btn primary"
+        onclick="fullscreenVisuals()"
+      >
+        Fullscreen
+      </button>
+
+    </div>
+
+  </div>
+
+  <div class="iframe-wrapper">
+
+    <iframe
+      id="visuals-iframe"
+      src="https://surudmahajan.github.io/test/"
+      loading="lazy"
+    ></iframe>
+
+  </div>
+
+</div>
 
     </div>
 
@@ -256,6 +296,53 @@ You may not use this file except in compliance with the License.
     type="module"
     src="app.js"
   ></script>
+  <script>
+
+let visualsVisible = true;
+
+function toggleVisuals() {
+
+  const panel =
+    document.getElementById(
+      "visuals-panel"
+    );
+
+  const btn =
+    event.target;
+
+  visualsVisible =
+    !visualsVisible;
+
+  panel.classList.toggle(
+    "hidden",
+    !visualsVisible
+  );
+
+  btn.textContent =
+    visualsVisible
+      ? "Hide"
+      : "Show";
+
+}
+
+function fullscreenVisuals() {
+
+  const panel =
+    document.getElementById(
+      "visuals-panel"
+    );
+
+  panel.classList.toggle(
+    "fullscreen"
+  );
+
+  panel.classList.remove(
+    "hidden"
+  );
+
+}
+
+</script>
 
 </body>
 </html>
