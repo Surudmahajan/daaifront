@@ -75,6 +75,10 @@ async function handleSend() {
       response.result
     );
 
+    sendVisuals(
+      response.result
+    );
+
     renderExplanationCard(
       response.explanation
     );
@@ -92,6 +96,25 @@ async function handleSend() {
     );
 
   }
+
+}
+function sendVisuals(
+  result
+) {
+
+  const iframe =
+    document.getElementById(
+      "visuals-iframe"
+    );
+
+  if (!iframe) {
+    return;
+  }
+
+  iframe.contentWindow?.postMessage(
+    result,
+    "*"
+  );
 
 }
 
