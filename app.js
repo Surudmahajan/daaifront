@@ -111,12 +111,16 @@ function sendVisuals(
     return;
   }
 
-  iframe.contentWindow?.postMessage(
-    result,
-    "*"
-  );
+ iframe.contentWindow?.postMessage(
+  {
+    type: "ENGINE_RESULT",
 
-}
+    payload: {
+      data: result
+    }
+  },
+  "*"
+);
 
 sendBtn.addEventListener(
   "click",
