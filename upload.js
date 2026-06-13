@@ -1,7 +1,8 @@
 import {
   uploadDataset,
   listDatasets,
-  resetDatasets
+  resetDatasets,
+  deleteDataset
 } from "./api.js";
 
 import {
