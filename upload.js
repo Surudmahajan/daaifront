@@ -187,3 +187,47 @@ function selectDataset(
   initializeDatasets();
 
 }
+async function removeDataset(
+  dataset
+) {
+
+  const confirmed =
+    confirm(
+      `Delete "${dataset}" ?`
+    );
+
+  if (!confirmed) {
+    return;
+  }
+
+  try {
+
+    await deleteDataset(
+      dataset
+    );
+
+    if (
+      selectedDataset ===
+      dataset
+    ) {
+
+      selectedDataset =
+        null;
+
+      setCurrentDataset(
+        null
+      );
+
+    }
+
+    await initializeDatasets();
+
+  } catch (error) {
+
+    renderError(
+      error.message
+    );
+
+  }
+
+}
