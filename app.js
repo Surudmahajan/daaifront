@@ -121,6 +121,7 @@ function sendVisuals(
   },
   "*"
 );
+}
 
 sendBtn.addEventListener(
   "click",
