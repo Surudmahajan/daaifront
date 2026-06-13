@@ -243,6 +243,31 @@ body {
 
   font-size: 14px;
 }
+.dataset-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.dataset-name {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.delete-dataset-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: #fca5a5;
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+
+.delete-dataset-btn:hover {
+  transform: scale(1.15);
+}
 
 .dataset-item {
   padding: 14px;
