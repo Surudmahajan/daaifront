@@ -35,7 +35,8 @@ export function setCurrentDataset(
 export function renderDatasets(
   datasets,
   selectedDataset,
-  onSelect
+  onSelect,
+  onDelete
 ) {
 
   datasetList.innerHTML = "";
@@ -77,11 +78,38 @@ export function renderDatasets(
 
       }
 
-      item.textContent =
-        dataset;
+      item.innerHTML = `
+        <div class="dataset-row">
+
+          <span class="dataset-name">
+            ${dataset}
+          </span>
+
+          <button
+            class="delete-dataset-btn"
+          >
+            🗑
+          </button>
+
+        </div>
+      `;
 
       item.onclick = () =>
         onSelect(dataset);
+
+      const deleteBtn =
+        item.querySelector(
+          ".delete-dataset-btn"
+        );
+
+      deleteBtn.onclick =
+        (event) => {
+
+          event.stopPropagation();
+
+          onDelete(dataset);
+
+        };
 
       datasetList.appendChild(
         item
