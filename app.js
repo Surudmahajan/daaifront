@@ -182,16 +182,54 @@ function initializeGuidePanel() {
   `;
 
   const examplesHTML = `
-    <h4>📊 Example Prompts</h4>
 
-    <ul>
-      <li>Calculate mean profit</li>
-      <li>Generate summary statistics</li>
-      <li>Find correlation between revenue and cost</li>
-      <li>Perform regression analysis</li>
-      <li>Forecast next month's sales</li>
-    </ul>
-  `;
+  <h4>📊 Example Prompts</h4>
+
+  <div class="examples-grid">
+
+    <div class="example-chip">
+      Calculate mean profit
+    </div>
+
+    <div class="example-chip">
+      Summarize document
+    </div>
+
+    <div class="example-chip">
+      Generate summary statistics
+    </div>
+
+    <div class="example-chip">
+      Extract key insights
+    </div>
+
+    <div class="example-chip">
+      Find correlation between revenue and cost
+    </div>
+
+    <div class="example-chip">
+      List action items
+    </div>
+
+    <div class="example-chip">
+      Perform regression analysis
+    </div>
+
+    <div class="example-chip">
+      Provide recommendations
+    </div>
+
+    <div class="example-chip">
+      Forecast next month's sales
+    </div>
+
+    <div class="example-chip">
+      Explain key findings
+    </div>
+
+  </div>
+
+`;
 
   const helpHTML = `
     <h4>🛠 Need Help?</h4>
@@ -199,7 +237,6 @@ function initializeGuidePanel() {
     <p>
       Found a bug?
       Need a feature?
-      Want to collaborate?
     </p>
 
     <p>
