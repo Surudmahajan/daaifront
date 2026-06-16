@@ -287,6 +287,36 @@ function initializeGuidePanel() {
 
             content.innerHTML =
               examplesHTML;
+            setTimeout(() => {
+
+  document
+    .querySelectorAll(
+      ".example-chip"
+    )
+    .forEach(
+      (chip) => {
+
+        chip.addEventListener(
+          "click",
+          () => {
+
+            const input =
+              document.getElementById(
+                "message-input"
+              );
+
+            input.value =
+              chip.textContent.trim();
+
+            input.focus();
+
+          }
+        );
+
+      }
+    );
+
+}, 0);
 
           }
 
