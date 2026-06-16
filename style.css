@@ -674,6 +674,51 @@ body {
 
   padding: 18px;
 
+
+.examples-grid {
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, 1fr);
+
+  gap: 12px;
+
+  margin-top: 15px;
+
+}
+
+.example-chip {
+
+  padding: 12px 14px;
+
+  border-radius: 12px;
+
+  background:
+    rgba(255,255,255,0.04);
+
+  border:
+    1px solid rgba(255,255,255,0.08);
+
+  color: var(--text-muted);
+
+  cursor: pointer;
+
+  transition: all 0.25s ease;
+
+}
+
+.example-chip:hover {
+
+  transform: translateY(-2px);
+
+  border-color: var(--primary);
+
+  color: white;
+
+  background:
+    rgba(99,102,241,0.12);
+
 }
 
 .guide-content h4 {
